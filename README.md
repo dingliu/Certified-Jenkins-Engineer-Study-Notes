@@ -48,8 +48,11 @@
 
 - Define continuous integration, continuous delivery, continuous deployment
     - [Continuous Integration](https://www.martinfowler.com/articles/continuousIntegration.html)
+      > Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day.
     - [Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
+      > Continuous Delivery is a software development discipline where you build software in such a way that the software can be released to production at any time.
     - Continuous Deployment
+      > Continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention.
 - [Difference between CI and CD](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd)
 - [Stages of CI and CD](https://www.michielrook.nl/2018/01/typical-ci-cd-pipeline-explained/)
 - [Continuous delivery versus continuous deployment](https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff)
