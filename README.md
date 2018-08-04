@@ -21,6 +21,26 @@
     - [Source Code Management](#source-code-management-1)
     - [Testing](#testing-1)
     - [Notifications](#notifications-1)
+    - [Distributed Builds](#distributed-builds-1)
+    - [Plugins](#plugins-1)
+    - [CI/CD](#cicd)
+    - [Jenkins Rest API](#jenkins-rest-api-1)
+    - [Security](#security-1)
+    - [Fingerprints](#fingerprints-1)
+    - [Artifacts](#artifacts-1)
+    - [Alerts](#alerts)
+- [Building Continuous Delivery (CD) Pipelines](#building-continuous-delivery-cd-pipelines)
+    - [Pipeline Concepts](#pipeline-concepts)
+    - [Upstream and downstream](#upstream-and-downstream)
+    - [Triggering](#triggering)
+    - [Pipeline (formerly known as "Workflow")](#pipeline-formerly-known-as-workflow)
+    - [Folders](#folders)
+    - [Parameters](#parameters)
+    - [Promotions](#promotions)
+    - [Notifications](#notifications-2)
+    - [Pipeline Multibranch and Repository Scanning](#pipeline-multibranch-and-repository-scanning)
+    - [Pipeline Global Libraries](#pipeline-global-libraries)
+- [CD-as-Code Best Practices](#cd-as-code-best-practices)
 
 ## Key CI/CD/Jenkins Concepts
 
@@ -142,3 +162,123 @@
 - Setup and usage
 - Email notifications, instant messaging
 - Alarming on notifications
+
+### Distributed Builds
+
+- Setting up and running builds in parallel
+- Setting up and using SSH agents, JNLP agents, cloud agents
+- Monitoring nodes
+
+### Plugins
+
+- Setting up and using Plugin Manager
+- Finding and configuring required plugins
+
+### CI/CD
+
+- Using Pipeline (formerly known as "Workflow")
+- Integrating automated deployment
+- Release management process
+- Pipeline stage behavior
+
+### Jenkins Rest API
+
+- Using REST API to trigger jobs remotely, access job status, create/delete jobs
+
+### Security
+
+- Setting up and using security realms
+- User database, project security, Matrix security
+- Setting up and using auditing
+- Setting up and using credentials
+
+### Fingerprints
+
+- Fingerprinting jobs shared or copied between jobs
+
+### Artifacts
+
+- Copying artifacts
+- Using artifacts in Jenkins
+- Artifact retention policy
+
+### Alerts
+
+- Making basic updates to jobs and build scripts
+- Troubleshooting specific problems from build and test failure alerts
+
+## Building Continuous Delivery (CD) Pipelines
+
+### Pipeline Concepts
+
+- Value stream mapping for CD pipelines
+- Why create a pipeline?
+- Gates within a CD pipeline
+- How to protect centralized pipelines when multiple groups use same tools
+- Definition of binary reuse, automated deployment, multiple environments
+- Elements of your ideal CI/CD pipeline - tools
+- Key concepts in building scripts (including security/password, environment information, etc.)
+
+### Upstream and downstream
+
+- Triggering jobs from other jobs
+- Setting up the Parameterized Trigger plugin
+- Upstream/downstream jobs
+
+### Triggering
+
+- Triggering Jenkins on code changes
+- Difference between push and pull
+- When to use push vs pull
+
+### Pipeline (formerly known as "Workflow")
+
+- Benefits of Pipeline vs linked jobs
+- Functionalities offered by Pipeline
+- How to use Pipeline
+- Pipeline stage view
+
+### Folders
+
+- How to control access to items in Jenkins with folders
+- Referencing jobs in folders
+
+### Parameters
+
+- Setting up test automation in Jenkins against an uploaded executable
+- Passing parameters between jobs
+- Identifying parameters and how to use them: file parameter, string parameter
+- Jenkins CLI parameters
+
+### Promotions
+
+- Promotion of a job
+- Why promote jobs?
+- How to use the Promoted Builds plugin
+
+### Notifications
+
+- How to radiate information on CD pipelines to teams
+
+### Pipeline Multibranch and Repository Scanning
+
+- Usage of Multibranch jobs
+- Scanning GitHub and BitBucket Organization
+- Scanning basic SCM repositories
+
+### Pipeline Global Libraries
+
+- How to share code across Pipelines
+- Usages of the Shared Libraries
+- Interaction with Folders and Repository scanning
+- Security and Groovy sandbox
+
+## CD-as-Code Best Practices
+
+- Distributed builds architecture
+- Fungible (replaceable) agents
+- Master-agent connectors and protocol
+- Tool installations on agents
+- Cloud agents
+- Traceability
+- High availability
