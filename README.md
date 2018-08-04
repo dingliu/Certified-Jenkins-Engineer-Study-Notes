@@ -1,21 +1,26 @@
-# Certified Jenkins Engineer (CJE) Exam Study Notes
+# Certified Jenkins Engineer (CJE) Exam Study Notes <!-- omit in toc -->
 
-- [Certified Jenkins Engineer (CJE) Exam Study Notes](#certified-jenkins-engineer-cje-exam-study-notes)
-    - [Key CI/CD/Jenkins Concepts](#key-cicdjenkins-concepts)
-        - [Continuous Delivery/Continuous Integration Concepts](#continuous-deliverycontinuous-integration-concepts)
-        - [Jobs](#jobs)
-        - [Builds](#builds)
-        - [Source Code Management](#source-code-management)
-        - [Testing](#testing)
-        - [Notifications](#notifications)
-        - [Distributed Builds](#distributed-builds)
-        - [Plugins](#plugins)
-        - [Jenkins Rest API](#jenkins-rest-api)
-        - [Security](#security)
-        - [Fingerprints](#fingerprints)
-        - [Artifacts](#artifacts)
-        - [Using 3rd party tools](#using-3rd-party-tools)
-        - [Installation Wizard](#installation-wizard)
+- [Key CI/CD/Jenkins Concepts](#key-cicdjenkins-concepts)
+    - [Continuous Delivery/Continuous Integration Concepts](#continuous-deliverycontinuous-integration-concepts)
+    - [Jobs](#jobs)
+    - [Builds](#builds)
+    - [Source Code Management](#source-code-management)
+    - [Testing](#testing)
+    - [Notifications](#notifications)
+    - [Distributed Builds](#distributed-builds)
+    - [Plugins](#plugins)
+    - [Jenkins Rest API](#jenkins-rest-api)
+    - [Security](#security)
+    - [Fingerprints](#fingerprints)
+    - [Artifacts](#artifacts)
+    - [Using 3rd party tools](#using-3rd-party-tools)
+    - [Installation Wizard](#installation-wizard)
+- [Jenkins usage (features and functionality)](#jenkins-usage-features-and-functionality)
+    - [Jobs](#jobs-1)
+    - [Builds](#builds-1)
+    - [Source Code Management](#source-code-management-1)
+    - [Testing](#testing-1)
+    - [Notifications](#notifications-1)
 
 ## Key CI/CD/Jenkins Concepts
 
@@ -30,6 +35,8 @@
 - [Continuous delivery versus continuous deployment](https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff)
 
 ### Jobs
+
+**Jobs** are actually **projects** in Jenkins now.
 
 - What are jobs in Jenkins?
 - Types of jobs
@@ -60,12 +67,12 @@
 - Types of notifications in Jenkins
 - Importance of notifications
 
-### Distributed Builds
+### [Distributed Builds](https://wiki.jenkins.io/display/JENKINS/Distributed+builds)
 
 - What are distributed builds?
 - Functions of masters and agents
 
-### Plugins
+### [Plugins](https://jenkins.io/doc/book/managing/plugins/)
 
 - What are plugins?
 - What is the plugin manager?
@@ -101,3 +108,37 @@
 - How to use the Wizard?
 - Which configurations are covered by the Installation Wizard?
 
+## Jenkins usage (features and functionality)
+
+### Jobs
+
+- Organizing jobs in Jenkins
+- Parameterized jobs
+- Usage of Freestyle/Pipeline/Matrix jobs
+    - Matrix jobs are **Multi-configuration projects** now
+
+### Builds
+
+- Setting up build steps and triggers
+- Configuring build tools
+- Running scripts as part of build steps
+
+### Source Code Management
+
+- Polling source code management
+- Creating hooks
+- Including version control tags and version information
+
+### Testing
+
+- Testing for code coverage
+- Test reports in Jenkins
+- Displaying test results
+- Integrating with test automation tools
+- Breaking builds
+
+### Notifications
+
+- Setup and usage
+- Email notifications, instant messaging
+- Alarming on notifications
