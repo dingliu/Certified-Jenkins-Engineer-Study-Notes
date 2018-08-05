@@ -54,35 +54,77 @@
     - Continuous Deployment
       > Continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention.
 - [Difference between CI and CD](https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd)
+  > **CI**- The developer's changes are validated by creating a build and running automated tests against the build.
+  >
+  > **CD**- An extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. 
 - [Stages of CI and CD](https://www.michielrook.nl/2018/01/typical-ci-cd-pipeline-explained/)
+    - **CI**
+        - Code checkout
+        - Code analysis, linting
+        - Compile
+        - Unit test
+        - Integration test
+        - Package artifacts
+        - Publish artifacts
+    - **CD**
+        - Provision environments
+        - Deploy artifacts to environments
+        - Performing tests
+            - Automated UI test
+            - Performance and load test
+            - Smoke test
+            - Acceptance test
+        - Manual release to production (Optional, for Continuous Delivery)
+        - Monitoring and telemetry
 - [Continuous delivery versus continuous deployment](https://puppet.com/blog/continuous-delivery-vs-continuous-deployment-what-s-diff)
+  > **Continuous delivery**- a software development discipline where you build software in such a way that the software can be released to production at any time. Every change is delivered to a staging environment using complete automation. It can be deployed to production with a push of a button when the business is ready.
+  >
+  > **Continuous deployment**- the next step of continuous delivery: Every change that passes the automated tests is deployed to production automatically.
 
 ### Jobs
 
-**Jobs** are actually **projects** in Jenkins now.
-
 - What are jobs in Jenkins?
+  > [**Jobs** are actually **projects** in Jenkins now.](https://stackoverflow.com/questions/17902242/difference-between-jenkins-job-and-project)
 - Types of jobs
-- Scope of jobs
+    - Freestyle
+    - Maven
+    - Pipline
+    - Multi-configuration
+    - Multibranch pipeline
+    - External job
+- Scope of jobs (**Can't find this item**)
 
 ### Builds
 
-- What are builds in Jenkins?
+- [What are builds in Jenkins?](https://wiki.jenkins.io/display/JENKINS/Building+a+software+project)
 - What are build steps, triggers, artifacts, and repositories?
+    - **Build steps** are the basic building blocks for the Jenkins freestyle build process. They are what let you tell Jenkins exactly how you want your project built
+    - **Triggers** are how you tell Jenkins when to kick off a build
+    - **Artifacts** are files which are associated with a single build. Artifacts can be used to represent data created as a side-effect of running a Jenkins build.
 - Build tools configuration
+    - [YouTube- Jenkins using global tools configuration & java_ant_git_tutorial_job](https://www.youtube.com/watch?v=cE-tG8ccHK8)
 
 ### Source Code Management
 
 - What are source code management systems and how are they used?
+    - [Wikipedia- Version Control](https://en.wikipedia.org/wiki/Version_control)
 - Cloud based SCMs
+  > GitHub, Bitbuckte, AWS CodeCommit, and etc.
 - Incremental updates vs. clean check out
+  > **Incremental build**: if it doesn't think it needs to rebuild a project, it won't. It may also use partially-built bits of the project if they haven't changed
+  >
+  > **Clean solution** will remove the build artifacts from the previous build
 - Checking in code
+  > To **check in** (ci or, [commit](https://en.wikipedia.org/wiki/Commit_(revision_control))) is to write or merge the changes made in the working copy back to the repository. The terms 'commit' and 'checkin' can also be used as nouns to describe the new revision that is created as a result of committing.
 - Infrastructure-as-Code
+  > **[Infrastructure as code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_Code)** is the process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools
 - Branch and Merge Strategies
+  > [ABCs of a Branching and Merging Strategy](https://www.cmcrossroads.com/article/abcs-branching-and-merging-strategy) is a good article. The most commonly used strategies are [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and [GitHub Flow](https://guides.github.com/introduction/flow/)
 
 ### Testing
 
 - Benefits of testing with Jenkins
+  > Test Automation software is the best way to increase the effectiveness, efficiency and coverage of your software testing. ... Once automated tests are created they can easily be repeated and they can be extended to perform tasks impossible with manual testing (see also [Top 10 Benefits of Automated Testing](https://saucelabs.com/blog/top-10-benefits-of-automated-testing))
 - Define unit test, smoke test, acceptance test, automated verification/functional tests
 
 ### Notifications
