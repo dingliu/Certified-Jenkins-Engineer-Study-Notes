@@ -1,45 +1,45 @@
 # Certified Jenkins Engineer (CJE) Exam Study Notes <!-- omit in toc -->
 
 - [Key CI/CD/Jenkins Concepts](#key-cicdjenkins-concepts)
-    - [Continuous Delivery/Continuous Integration Concepts](#continuous-deliverycontinuous-integration-concepts)
-    - [Jobs](#jobs)
-    - [Builds](#builds)
-    - [Source Code Management](#source-code-management)
-    - [Testing](#testing)
-    - [Notifications](#notifications)
-    - [Distributed Builds](#distributed-builds)
-    - [Plugins](#plugins)
-    - [Jenkins Rest API](#jenkins-rest-api)
-    - [Security](#security)
-    - [Fingerprints](#fingerprints)
-    - [Artifacts](#artifacts)
-    - [Using 3rd party tools](#using-3rd-party-tools)
-    - [Installation Wizard](#installation-wizard)
+  - [Continuous Delivery/Continuous Integration Concepts](#continuous-deliverycontinuous-integration-concepts)
+  - [Jobs](#jobs)
+  - [Builds](#builds)
+  - [Source Code Management](#source-code-management)
+  - [Testing](#testing)
+  - [Notifications](#notifications)
+  - [Distributed Builds](#distributed-builds)
+  - [Plugins](#plugins)
+  - [Jenkins Rest API](#jenkins-rest-api)
+  - [Security](#security)
+  - [Fingerprints](#fingerprints)
+  - [Artifacts](#artifacts)
+  - [Using 3rd party tools](#using-3rd-party-tools)
+  - [Installation Wizard](#installation-wizard)
 - [Jenkins usage (features and functionality)](#jenkins-usage-features-and-functionality)
-    - [Jobs](#jobs-1)
-    - [Builds](#builds-1)
-    - [Source Code Management](#source-code-management-1)
-    - [Testing](#testing-1)
-    - [Notifications](#notifications-1)
-    - [Distributed Builds](#distributed-builds-1)
-    - [Plugins](#plugins-1)
-    - [CI/CD](#cicd)
-    - [Jenkins Rest API](#jenkins-rest-api-1)
-    - [Security](#security-1)
-    - [Fingerprints](#fingerprints-1)
-    - [Artifacts](#artifacts-1)
-    - [Alerts](#alerts)
+  - [Jobs](#jobs-1)
+  - [Builds](#builds-1)
+  - [Source Code Management](#source-code-management-1)
+  - [Testing](#testing-1)
+  - [Notifications](#notifications-1)
+  - [Distributed Builds](#distributed-builds-1)
+  - [Plugins](#plugins-1)
+  - [CI/CD](#cicd)
+  - [Jenkins Rest API](#jenkins-rest-api-1)
+  - [Security](#security-1)
+  - [Fingerprints](#fingerprints-1)
+  - [Artifacts](#artifacts-1)
+  - [Alerts](#alerts)
 - [Building Continuous Delivery (CD) Pipelines](#building-continuous-delivery-cd-pipelines)
-    - [Pipeline Concepts](#pipeline-concepts)
-    - [Upstream and downstream](#upstream-and-downstream)
-    - [Triggering](#triggering)
-    - [Pipeline (formerly known as "Workflow")](#pipeline-formerly-known-as-workflow)
-    - [Folders](#folders)
-    - [Parameters](#parameters)
-    - [Promotions](#promotions)
-    - [Notifications](#notifications-2)
-    - [Pipeline Multibranch and Repository Scanning](#pipeline-multibranch-and-repository-scanning)
-    - [Pipeline Global Libraries](#pipeline-global-libraries)
+  - [Pipeline Concepts](#pipeline-concepts)
+  - [Upstream and downstream](#upstream-and-downstream)
+  - [Triggering](#triggering)
+  - [Pipeline (formerly known as "Workflow")](#pipeline-formerly-known-as-workflow)
+  - [Folders](#folders)
+  - [Parameters](#parameters)
+  - [Promotions](#promotions)
+  - [Notifications](#notifications-2)
+  - [Pipeline Multibranch and Repository Scanning](#pipeline-multibranch-and-repository-scanning)
+  - [Pipeline Global Libraries](#pipeline-global-libraries)
 - [CD-as-Code Best Practices](#cd-as-code-best-practices)
 
 ## Key CI/CD/Jenkins Concepts
@@ -126,52 +126,86 @@
 - Benefits of testing with Jenkins
   > Test Automation software is the best way to increase the effectiveness, efficiency and coverage of your software testing. ... Once automated tests are created they can easily be repeated and they can be extended to perform tasks impossible with manual testing (see also [Top 10 Benefits of Automated Testing](https://saucelabs.com/blog/top-10-benefits-of-automated-testing))
 - Define unit test, smoke test, acceptance test, automated verification/functional tests
+  > **Unit test**- a software testing method by which individual units of source code, sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine whether they are fit for use. ([Wikipedia](https://en.wikipedia.org/wiki/Unit_testing))
+  >
+  > **Smoke test** is preliminary testing to reveal simple failures severe enough to, for example, reject a prospective software release. ([Wikipedia](https://en.wikipedia.org/wiki/Smoke_testing_(software)))
+  >
+  > **Acceptance test**- a formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system. ([Wikepedia](https://en.wikipedia.org/wiki/Acceptance_testing))
+  >
+  > **Functional test** is a quality assurance (QA) process and a type of black-box testing that bases its test cases on the specifications of the software component under test. ([Wikipedia](https://en.wikipedia.org/wiki/Functional_testing))
 
 ### Notifications
 
 - Types of notifications in Jenkins
+  > Email, RSS, IM (IRC, Slack, and etc.), HTTP call
 - Importance of notifications
+  > Better visibility, more transparent, faster feedback loop, continuous improvement, and etc.
 
 ### [Distributed Builds](https://wiki.jenkins.io/display/JENKINS/Distributed+builds)
 
 - What are distributed builds?
+  > The reason being that workloads are often best "farmed out" to distributed servers. This may be for scale, or to provide different tools, or build on different target platforms. Another common reason for remote agents is to enact deployments into secured environments (without the master having direct access).
 - Functions of masters and agents
+  > A "**master**" operating by itself is the basic installation of Jenkins and in this configuration the master handles all tasks for your build system.
+  > 
+  > An **agent** is a computer that is set up to offload build projects from the master and once setup this distribution of tasks is fairly automatic. 
 
 ### [Plugins](https://jenkins.io/doc/book/managing/plugins/)
 
 - What are plugins?
+  > Jenkins defines extensibility points, which are interfaces or abstract classes that model an aspect of a build system. Those interfaces define contracts of what need to be implemented, and Jenkins allows plugins to contribute those implementations.
 - What is the plugin manager?
+  > The Web UI to manage Jenkins plugins.
 
-### Jenkins Rest API
+### [Jenkins Rest API](https://wiki.jenkins.io/display/JENKINS/Remote+access+API)
 
 - How to interact with it
+  > BASH (curl), PowerShell (Invoke-WebRrequest or Invoke-RestMethod), web client, etc.
 - Why use it?
+  > Interact with Jenkins programmatically
+
 
 ### Security
 
-- Authentication versus authorization
-- Matrix security
+- [Authentication versus authorization](https://stackoverflow.com/questions/6556522/authentication-versus-authorization)
+- [Matrix security](https://wiki.jenkins.io/display/JENKINS/Matrix-based+security)
 - Definition of auditing, credentials, and other key security concepts
+  > An **IT audit** is the examination and evaluation of an organization's information technology infrastructure, policies and operations. Information technology audits determine whether IT controls protect corporate assets, ensure data integrity and are aligned with the business's overall goals.
+  > 
+  > **Credentials** refer to the verification of identity or tools for authentication. They may be part of a certificate or other authentication process that helps confirm a user’s identity in relation to a network address or other system ID.
+  > [Other key security concepts from Wikipedia](https://en.wikipedia.org/wiki/Information_security#Key_concepts)
 
 ### Fingerprints
 
-- What are fingerprints?
+- What are [fingerprints](https://wiki.jenkins.io/display/JENKINS/Fingerprint)?
+  > Jenkins supports file fingerprinting to track interdependencies of artifacts in different projects.
 - How do fingerprints work?
+  > The fingerprint of a file is simply a MD5 checksum. Jenkins maintains a database of md5sum, and for each md5sum, Jenkins records which builds of which projects used. This database is updated every time a build runs and files are fingerprinted.
 
 ### Artifacts
 
 - How to use artifacts in Jenkins
+  > 1. Archive artifacts in upstream projects: In the Jenkins project (or job) configuration, create a **Post Build Action**, select **Archive the artifacts**, also in **General** section, set the **Permission to Copy Artifact**
+  > 2. Use the archived artifacts in downstream projects: In the Jenkins project (or job) configuration, create a **Build step**, select **Copy artifacts from another project**
 - Storing artifacts
+  > It is being archived on the master server (even if the build were on a slave) in the following folder:
+  >
+  > `$JENKINS_HOME/jobs/<job>/builds/<build>/archive`
+  >
+  > But you can configure a different location using the 'Advanced' setting of the job (where you can set a different workspace folder) or using plugins that are made for this purpose such as Copy Artifact Plugin ([Stack Overflow](https://stackoverflow.com/questions/35890952/where-are-jenkins-artifacts-located))
 
 ### Using 3rd party tools
 
 - How to use 3rd party tools
+  > Not very sure what is the scope of 3rd party tools. A lot of plugins provide integration with 3rd party tools. Also 3rd party tools can use Jenkins Rest API or Jenkins CLI to work with Jenkins.
 
 ### Installation Wizard
 
 - What is the Jenkins Installation Wizard?
+  > It is the [post-installation setup wizard](https://jenkins.io/doc/book/installing/#setup-wizard). It takes you through are a few quick "one-off" steps to unlock Jenkins, customize it with plugins and create the first administrator user through which you can continue accessing Jenkins.
 - How to use the Wizard?
 - Which configurations are covered by the Installation Wizard?
+  > Unlock Jenkins by providing the Administrator password. Customizing Jenkins with plugins. Creating the first administrator user
 
 ## Jenkins usage (features and functionality)
 
