@@ -212,21 +212,39 @@
 ### Jobs
 
 - Organizing jobs in Jenkins
+  > **[Views](https://www.cloudbees.com/blog/organizing-jobs-views-instead-folders-just-my-grandma)** (my view or custom view) and **folders** are the ways to organize projects
 - Parameterized jobs
+  > Use **[parameterized build](https://wiki.jenkins.io/display/JENKINS/Parameterized+Build)**, The parameters are available as environment variables.
+  > The **[Parameterized Trigger Plugin](https://wiki.jenkins.io/display/JENKINS/Parameterized+Trigger+Plugin)** lets you trigger new builds when your build has completed, with various ways of specifying parameters for the new build.
 - Usage of Freestyle/Pipeline/Matrix jobs
-    - Matrix jobs are **Multi-configuration projects** now
+    > Matrix jobs are [**Multi-configuration projects**](https://wiki.jenkins.io/display/JENKINS/Building+a+matrix+project) now.
+    >
+    > **Freestyle** projects are good start point and can be treated as an empty template.
+    > [**Pipeline**](https://jenkins.io/doc/book/pipeline/) in Jenkins is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines "as code" via the Pipeline DSL.
 
 ### Builds
 
 - Setting up build steps and triggers
+  > In **freestyle** projects, build steps are defined in configuration (build section). In **pipeline** projects, build steps are defined by Pipeline DSL.
+  >
+  > Build [**triggers**](https://stackoverflow.com/a/47758526) are defined in the project configuration (**Build Triggers** section). The triggers can be another upstream project, a schedule, a SCM hook, polling SCM changes, or an API call.
 - Configuring build tools
+  > You can configure build tools in **Manage Jenkins, Global Tools Configuration**.
+  > 
+  > There are sections for **Maven**, **JDK**, **Git**, **Gradle**, **Ant**, **Docker**, and etc.
 - Running scripts as part of build steps
+  > In **freestyle** projects, you can select running scripts as a build step.
+  >
+  > In **pipeline** projects, you can run scripts via the **`sh`** directive.
 
 ### Source Code Management
 
 - Polling source code management
+  > The schedule of polling SCM can be defined with [cron job syntax](http://www.adminschoice.com/crontab-quick-reference) (with minor difference) with additional time zone specificcation)
 - Creating hooks
+  > There is [a great tutorial](https://www.atlassian.com/git/tutorials/git-hooks) from Atlassian, the maker of Bitbucket, on Git hooks.
 - Including version control tags and version information
+  > [_How do you achieve a numeric versioning scheme with Git_](https://softwareengineering.stackexchange.com/questions/141973/how-do-you-achieve-a-numeric-versioning-scheme-with-git) from Stack Overflow
 
 ### Testing
 
