@@ -249,27 +249,42 @@
 ### Testing
 
 - Testing for code coverage
+  > For Java projects, [Cobertura plugin](https://wiki.jenkins.io/display/JENKINS/Cobertura+Plugin) is a tool to [generate code coverage reports](https://jenkins-le-guide-complet.github.io/html/sect-first-steps-metrics.html)
 - Test reports in Jenkins
+  > For Maven projects, there is no extra configuration required. For Java projects, user needs to add the **Publish JUnit test result report** as a **Post-build Actions**. For projects in other languages, similar configuration is required after adding **xUnit plugin**.
 - Displaying test results
+  > Jenkins displays test result after getting the test reports. The result includes trend, test list, test details, and time costs. (from book [Jenkins: The Definitive Guide](http://www.bogotobogo.com/DevOps/Jenkins/images/Intro_install/jenkins-the-definitive-guide.pdf))
 - Integrating with test automation tools
 - Breaking builds
 
 ### Notifications
 
 - Setup and usage
+  > There are different notification strategies, and different notification channels.
+  >
+  > A good aproach is to notify the one who caused build failure first, then notify others when the failure repeats.
+  > The notification channels include **email**, **editable email**, **RSS feed**, **instant messaging**, **SMS**, **desktop notification**, **noisy sound**, and some **special devices**
 - Email notifications, instant messaging
+  > There are regular email notification and (advanced) editable email notification.
+  >
+  > The instant messaging notifications include Jabber, IRC, Slack, Trello, and etc.
 - Alarming on notifications
+  > Use plugins to make noisy sound alarm?
 
 ### Distributed Builds
 
 - Setting up and running builds in parallel
 - Setting up and using SSH agents, JNLP agents, cloud agents
+  > To use **SSH agents**, put master's ssh public key in slave's `~/.ssh/authorized_keys` directory. To use **JNLP agents**, initial the connection request from slave. There are several plugins for **cloud agents**, such as for AWS, GCP, or OpenStack
 - Monitoring nodes
+  > You can check the status of nodes in **Configure Jenkins** -> **Configure nodes**. You can also set the **retention strategy** for nodes
 
 ### Plugins
 
 - Setting up and using Plugin Manager
+  > [_**Managing Plugins**_](https://jenkins.io/doc/book/managing/plugins/) page addresses Jenkins Plugin Manager
 - Finding and configuring required plugins
+  > From Plugin Manager's **available** tab, upload an **`.hpi`** from **advanced** tab, or [using the **Jenkins CLI**](https://jenkins.io/doc/book/managing/plugins/#install-with-cli)
 
 ### CI/CD
 
